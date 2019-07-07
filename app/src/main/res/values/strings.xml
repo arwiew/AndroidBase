@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Weather</string>
+    <string name="Actual_Temp">Актуальная температура</string>
+    <string name="Утро">Погода утром</string>
+    <string name="Вечер">Погода вечером</string>
+    <string name="Обед">Погода днем</string>
 </resources>
