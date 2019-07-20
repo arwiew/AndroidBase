@@ -1,12 +1,8 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="Actual_Temp">Актуальная температура</string>
-    <string name="Утро">Погода утром</string>
-    <string name="Вечер">Погода вечером</string>
-    <string name="Обед">Погода днем</string>
-    <string name="TextView2">Москва</string>
-    <string name="TextView1">Свнкт-Петербург</string>
-    <string name="textview3">Казань</string>
-    <string name="textview4">Екатеринбург</string>
-    <string name="textview5">Омск</string>
+    <string name="Morning">Утром</string>
+    <string name="Evening">Вечером</string>
+    <string name="MidD">Днем</string>
+
 </resources>

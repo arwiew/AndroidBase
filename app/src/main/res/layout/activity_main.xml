@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="8dp"
 
 
@@ -45,39 +45,47 @@
         app:layout_constraintBottom_toTopOf="@+id/tableRow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MyCity"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <TableRow
         android:id="@+id/tableRow"
-        android:layout_width="397dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="112dp"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/MyCity"
+        android:layout_width="394dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/Actual_Temp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp">>
+        tools:layout_editor_absoluteX="8dp"><![CDATA[>
+
+        ]]>
 
         <TextView
             android:id="@+id/Morning"
-            android:layout_width="128dp"
-            android:layout_height="146dp"
-            android:text="@string/Утро"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:rotationX="0"
+            android:text="@string/Morning"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/MidDay"
-            android:layout_width="136dp"
-            android:layout_height="146dp"
-            android:text="@string/Обед"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/MidD"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/Evn"
-            android:layout_width="143dp"
-            android:layout_height="147dp"
-            android:text="@string/Вечер"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Evening"
             android:textSize="20sp" />
 
     </TableRow>
+
+
 
 </android.support.constraint.ConstraintLayout>
