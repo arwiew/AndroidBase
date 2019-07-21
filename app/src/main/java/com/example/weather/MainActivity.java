@@ -2,6 +2,7 @@ package com.example.weather;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +10,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.URL;
+
 public class MainActivity extends AppCompatActivity {
 
-    private MainPresenter presenter = MainPresenter.getInstance();
+
     private String value;
     private TextView city;
 
@@ -62,4 +65,9 @@ public class MainActivity extends AppCompatActivity {
         city.setText(value);
     }
 
+    public void button_onClick(View view) {
+        Toast.makeText(this, "button onClick event!", Toast.LENGTH_SHORT).show();
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/pogoda"));
+        startActivity(browserIntent);
+    }
 }
