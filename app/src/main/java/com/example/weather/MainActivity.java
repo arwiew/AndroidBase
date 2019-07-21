@@ -19,21 +19,32 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         String instanceState;
         if (savedInstanceState == null){
-            instanceState = "Первый запуск!";
+           instanceState = "Первый запуск!";
         }
         else{
-            instanceState = "Повторный запуск!";
+        instanceState = "Повторный запуск!";
         }
-        // выведем, какой это запуск
+
         Toast.makeText(getApplicationContext(), instanceState + " - onCreate()", Toast.LENGTH_SHORT).show();
-       // final TextView textCounter = findViewById(R.id.textCounter); // Текст
-        final MainPresenter presenter = MainPresenter.getInstance();
-        // Получить презентер
-   //     textCounter.setText(((Integer)presenter.getCounter()).toString());
         city = findViewById(R.id.MyCity);
         city.setText(value);
+
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("value", value);
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle saveInstanceState) {
+        super.onRestoreInstanceState(saveInstanceState);
+        value = (String) saveInstanceState.get("value");
+        city.setText(value);
+        Toast.makeText(getApplicationContext(), "Повторный запуск!! - onRestoreInstanceState()", Toast.LENGTH_SHORT).show();
     }
 
     public void button2_onClick(View view) {
